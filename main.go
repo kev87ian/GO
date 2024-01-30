@@ -3,16 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	var smsSendingLimit int
-	var costPerSms float64
-	var hasPermission bool
-	var userName string
 
-	fmt.Printf(
-		"%v %f %v %q\n",
-		smsSendingLimit,
-		costPerSms,
-		hasPermission,
-		userName,
-	)
+	var conferenceName = "Go Conferenc"
+	const conferenceTickets = 50
+	var remainingTickets = 50
+
+	fmt.Printf("Welcome to the %v booking application!\n", conferenceName)
+	fmt.Printf("We have a total of %v tickets, and %v are still available", conferenceTickets, remainingTickets)
+
 }

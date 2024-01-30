@@ -1,31 +1,32 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
+	conferenceName := "Go Conference"
+	const conferenceTickets = 50
+	var remainingTickets uint = 50
+	fmt.Printf("Welcome to the %v booking application! \n", conferenceName)
+	fmt.Println("We have a total of", conferenceTickets, "tickets, and", remainingTickets, "are still available.")
 
-	/*	casting from float to int */
-	//accountAge := 2.6
-	//accountAgeInt := int(accountAge)
+	// user input
+	var firstName string
+	var lastName string
+	var email string
+	var userTickets uint
 
-	//fmt.Printf("The data type of acocuntAgeInt is %T\n", accountAgeInt)
-	//fmt.Println("And it has existed for", accountAgeInt, "years")
+	fmt.Println("Please enter your first name;")
+	fmt.Scan(&firstName)
+	fmt.Println("Please enter your last name")
+	fmt.Scan(&lastName)
+	fmt.Println("Enter your email address")
+	fmt.Scan(&email)
+	fmt.Println("Enter the number of tickets you need")
+	fmt.Scan(&userTickets)
+	remainingTickets = remainingTickets - userTickets
+	fmt.Printf("Thank you, %v %v for purchasing %v tickets. They've been sent to %v", firstName, lastName, userTickets, email)
+	fmt.Printf("We have %v remaining tickets for %v", remainingTickets, conferenceName)
 
-	const premiumPlanName string = "Premium plan"
-	const basicPlanName = "Basic Plan"
-
-	const secondsInMinute = 60
-	const minutesInAnHour = 60
-	const secondsInHour = secondsInMinute * minutesInAnHour
-
-	fmt.Println("Number of seconds in an hour: ", secondsInHour)
-
-	/*Formatting Strings*/
-	const name = "Saul Goodman"
-	const openRate = 30.5
-	msg := fmt.Sprintf("Hi, %s, your open rate is %.1f percent", name, openRate)
-	println(msg)
+	// arrays and slices
 
 }
